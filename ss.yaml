@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: my-ss
+  labels:
+    app: ss-app
+spec:
+  template:
+    metadata:
+      labels: 
+        app: ss-app
+    spec:
+      containers:
+        - name: ss-container
+          image: httpd
+          ports:
+            - containerPort: 80
+
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: ss-app
+    
+    # matchExpression:
+    #   - {key: app, operator: In, values: [demo-app]}

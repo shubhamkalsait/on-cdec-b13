@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy
+  labels:
+    app: deployment-app
+spec:
+  template:
+    metadata:
+      labels: 
+        app: deployment-app
+    spec:
+      containers:
+        - name: deployment-container
+          image: httpd
+          ports:
+            - containerPort: 80
+        resources:
+          limits:
+            cpu: 15m
+            memory: 100Mi
+          request:
+            cpu: 10m
+            memoty: 50Mi
+
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: deployment-app
+  
+  strategy:
+    type: RollingUpdate
+    
+    # matchExpression:
+    #   - {key: app, operator: In, values: [demo-app]}

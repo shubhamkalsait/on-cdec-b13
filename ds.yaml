@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-ds
+  labels:
+    app: ds-app
+spec:
+  template:
+    metadata:
+      labels: 
+        app: ds-app
+    spec:
+      nodeSelector: 
+        kubernetes.io/hostname: node01
+      containers:
+        - name: ds-container
+          image: httpd
+          ports:
+            - containerPort: 80
+            
+  selector:
+    matchLabels:
+      app: ds-app
+    
+    # matchExpression:
+    #   - {key: app, operator: In, values: [demo-app]}

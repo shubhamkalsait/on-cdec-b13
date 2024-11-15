@@ -180,8 +180,35 @@ limit:
   cpu: 2 Core
   mem: 500 MB
 
-HPA, Horizontal pod Autoscaler
+HPA, HorizontalpodAutoscaler
 Number pod (CPU-UTILIZATION) - metrics
 Metrics Server - 
 
-Node Auto Scaling - NodeGroup desried = 2, man = 1, max = 5
+Node Auto Scaling - NodeGroup desried = 2, min = 1, max = 5
+
+Loadbalancer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

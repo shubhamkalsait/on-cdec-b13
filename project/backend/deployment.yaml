@@ -21,7 +21,7 @@ spec:
               memory: 500Mi
             requests:
               cpu: 400m
-              memoty: 400Mi
+              memory: 400Mi
 
   replicas: 3
 

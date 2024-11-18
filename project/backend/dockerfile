@@ -1,0 +1,3 @@
+FROM tomcat:8
+COPY  student-app.war webapps/studentapp.war
+EXPOSE 8080

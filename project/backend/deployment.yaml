@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: studentapp-container
-          image: tomcat:8
+          image: shubhamkalsait1/studentapp-backend:latest
           ports:
             - containerPort: 8080
         resources:

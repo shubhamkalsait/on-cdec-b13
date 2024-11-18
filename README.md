@@ -189,6 +189,59 @@ Node Auto Scaling - NodeGroup desried = 2, min = 1, max = 5
 Loadbalancer
 
 
+ Ingres
+
+What - 
+Why - 
+How - 
+
+Theory | 
+
+DevOps engineer
+
+
+Project - 
+-----------
+
+
+Applications three tier - 
+
+amazon.jar - 
+
+database - application (java) 
+
+Frontend (HTML)
+Backend (Java)
+Database (Mariadb)
+
+TechStack:
+
+Frontend - index.html
+Backend - Maven / JAva Application
+Database - Mariadb
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

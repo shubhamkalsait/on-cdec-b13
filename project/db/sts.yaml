@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: studentapp-db
+  labels:
+    app: studentapp-db
+spec:
+  template:
+    metadata:
+      labels: 
+        app: studentapp-db
+    spec:
+      containers:
+        - name: studentapp-container
+          image: mysql
+          ports:
+            - containerPort: 3306
+          env:
+            name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: studentapp-secret
+                key: db_pass
+  replicas: 3
+  selector:
+    matchLabels:
+      app: studentapp-db

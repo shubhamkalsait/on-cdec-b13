@@ -10,3 +10,4 @@ spec:
     name: java
   selector:
     app: studentapp
+  type: LoadBalancer
